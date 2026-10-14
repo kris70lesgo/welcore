@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'features/serverpod/dispatch_controller.dart';
 import 'features/serverpod/dispatch_workspace.dart';
+import 'features/serverpod/serverpod_url.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +16,7 @@ Future<void> main() async {
     'SERVERPOD_URL',
     defaultValue: 'http://localhost:8080/',
   );
-  final client = Client(Uri.base.resolve(serverUrl).toString());
+  final client = Client(resolveServerpodUrl(Uri.base, serverUrl).toString());
   final preferences = await SharedPreferences.getInstance();
   final controller = DispatchController(
     gateway: ServerpodDispatchGateway(client),
