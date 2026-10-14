@@ -33,7 +33,7 @@ The script generates private, random local database and service secrets. Postgre
 
 ## Submission links
 
-- Repository: https://github.com/kris70lesgo/adms-serverpod-dispatch
+- Repository: https://github.com/kris70lesgo/welcore
 - Judge test build: https://welcore.serverpod.space/ (Serverpod Cloud free trial through 14 November 2026; Starter is $5/month after the trial if it remains active.)
 - Public demonstration video (YouTube or Vimeo, under two minutes): record and paste its public URL into BuilderBase.
 
