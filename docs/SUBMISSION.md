@@ -1,8 +1,8 @@
-# ADMS Dispatch — hackathon submission
+# Welcore — hackathon submission
 
 ## Description
 
-ADMS Dispatch is a full-stack ambulance-response coordination app for emergency dispatch teams. It brings incident intake, live ambulance availability, nearest-unit dispatch, crew response progress, hospital handover, and an audit trail into one Flutter workspace.
+Welcore is a full-stack ambulance-response coordination app for emergency dispatch teams. It brings incident intake, live ambulance availability, nearest-unit dispatch, crew response progress, hospital handover, and an audit trail into one Flutter workspace.
 
 Dispatchers can report incidents and send the closest available unit. Crews see their assigned responses, choose the receiving hospital, document patient care, and sign the handover. Citizens can request assistance and follow their own response without seeing staff-only or clinical details. Administrators manage accounts, invitations, fleet readiness, hospitals, scheduled maintenance, response targets, and reports.
 

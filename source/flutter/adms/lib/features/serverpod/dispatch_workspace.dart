@@ -37,7 +37,7 @@ class _ServerpodDispatchAppState extends State<ServerpodDispatchApp> {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-    title: 'ADMS Dispatch',
+    title: 'Welcore Dispatch',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       useMaterial3: true,
@@ -371,28 +371,34 @@ class _DispatchWorkspaceState extends State<DispatchWorkspace> {
         ),
         child: const Icon(Icons.add, color: Colors.white, size: 30),
       ),
-      const SizedBox(width: 12),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'ADMS',
-            style: TextStyle(
-              color: dark ? Colors.white : _navy,
-              fontSize: 22,
-              fontWeight: FontWeight.w800,
-              letterSpacing: 2,
+      const SizedBox(width: 8),
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Welcore',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: dark ? Colors.white : _navy,
+                fontSize: 20,
+                fontWeight: FontWeight.w800,
+                letterSpacing: 0.5,
+              ),
             ),
-          ),
-          Text(
-            'DISPATCH',
-            style: TextStyle(
-              color: dark ? Colors.white54 : _muted,
-              fontSize: 12,
-              letterSpacing: 2.5,
+            Text(
+              'DISPATCH',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: dark ? Colors.white54 : _muted,
+                fontSize: 11,
+                letterSpacing: 1.6,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ],
   );

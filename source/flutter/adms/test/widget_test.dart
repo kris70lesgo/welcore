@@ -11,6 +11,6 @@ void main() {
       ServerpodDispatchApp(controller: controller, showMap: false),
     );
     expect(find.text('Start dispatch demo'), findsOneWidget);
-    expect(find.text('ADMS'), findsOneWidget);
+    expect(find.text('Welcore'), findsOneWidget);
   });
 }

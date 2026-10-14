@@ -1,11 +1,11 @@
 {
-  "name": "ADMS Dispatch",
-  "short_name": "ADMS",
+  "name": "Welcore Dispatch",
+  "short_name": "Welcore",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#F6F8FA",
   "theme_color": "#152A45",
-  "description": "Serverpod-powered ambulance dispatch simulation",
+  "description": "Welcore is a Serverpod-powered ambulance response coordination workspace",
   "icons": [
     {
       "src": "icon.svg",

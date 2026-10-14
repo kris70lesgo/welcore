@@ -1,13 +1,13 @@
 # Hackathon project materials
 
 ## Project name
-ADMS Dispatch
+Welcore
 
 ## Short description
 A Serverpod-powered Flutter dispatch desk that turns a reported incident into a coordinated ambulance response, with nearest-unit assignment, live crew progress, and a durable audit timeline.
 
 ## Problem and user
-A dispatcher needs to know which incidents are awaiting help, which ambulances are free, and what stage each crew has reached. Switching between disconnected lists makes this harder. ADMS Dispatch puts the incident queue, location map, unit readiness, and response controls in one workspace.
+A dispatcher needs to know which incidents are awaiting help, which ambulances are free, and what stage each crew has reached. Switching between disconnected lists makes this harder. Welcore puts the incident queue, location map, unit readiness, and response controls in one workspace.
 
 ## Serverpod contribution
 Serverpod is the core backend. YAML models generate both PostgreSQL ORM code and the typed Dart client. The server validates reports, ranks available ambulances by Haversine distance, claims a unit under a PostgreSQL row lock, enforces the response lifecycle, stores audit events, and streams authoritative snapshots through WebSockets. It is not a static UI with an unused endpoint.

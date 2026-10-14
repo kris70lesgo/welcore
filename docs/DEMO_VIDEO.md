@@ -1,4 +1,4 @@
-# ADMS Dispatch demo video
+# Welcore demo video
 
 Record a public video under two minutes at the deployed Serverpod Cloud URL. Keep fictional simulation data on screen and narrate the feature flow in English. The hackathon rules accept YouTube or Vimeo links.
 
@@ -6,7 +6,7 @@ Record a public video under two minutes at the deployed Serverpod Cloud URL. Kee
 
 | Time | Show | Say |
 |---|---|---|
-| 0–10 sec | Open the hosted app and start the dispatch demo. | “ADMS Dispatch is a Serverpod-powered ambulance coordination workspace.” |
+| 0–10 sec | Open the hosted app and start the dispatch demo. | “Welcore is a Serverpod-powered ambulance coordination workspace.” |
 | 10–25 sec | Point to the live incident queue, map, and three available units. | “Dispatchers can see open incidents and fleet availability together.” |
 | 25–42 sec | Create an example incident and show it appear in the queue. | “A new report becomes a persistent incident with an audit trail.” |
 | 42–58 sec | Dispatch the nearest unit; show the assigned call sign and availability change. | “The backend ranks available crews by distance and claims a unit safely.” |

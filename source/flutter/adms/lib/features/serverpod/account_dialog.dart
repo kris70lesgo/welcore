@@ -43,7 +43,7 @@ class _AccountDialogState extends State<AccountDialog> {
     title: Text(switch (widget.mode) {
       'organization' => 'Create your organization',
       'invitation' => 'Join or recover an account',
-      _ => 'Sign in to ADMS',
+      _ => 'Sign in to Welcore',
     }),
     content: SizedBox(
       width: 420,

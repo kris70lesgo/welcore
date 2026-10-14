@@ -1,4 +1,4 @@
-# ADMS — Serverpod ambulance dispatch application
+# Welcore — Serverpod ambulance dispatch application
 
 A complete local Flutter application for an organization to manage incident intake, ambulance responses, crew assignments, receiving hospitals, patient handover, fleet maintenance, and reports. The default application runs entirely on **Serverpod 4.0.4 and PostgreSQL**.
 

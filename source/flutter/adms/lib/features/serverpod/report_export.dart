@@ -43,7 +43,7 @@ String incidentCsv(List<DispatchIncident> records) => [
 ].map((row) => row.map(csvCell).join(',')).join('\r\n');
 Future<void> exportIncidentCsv(List<DispatchIncident> records) => downloadFile(
   Uint8List.fromList(utf8.encode(incidentCsv(records))),
-  'adms-incidents.csv',
+  'welcore-incidents.csv',
   'text/csv;charset=utf-8',
 );
 Future<Uint8List> incidentPdfBytes(DispatchSnapshot data) async {
@@ -54,7 +54,7 @@ Future<Uint8List> incidentPdfBytes(DispatchSnapshot data) async {
       build: (_) => [
         pw.Header(
           level: 0,
-          text: '${data.config?.name ?? 'ADMS'} - incident report',
+          text: '${data.config?.name ?? 'Welcore'} - incident report',
         ),
         pw.Text(
           'Generated ${data.serverTime.toUtc().toIso8601String()} | ${data.incidents.length} records',
@@ -82,7 +82,7 @@ Future<Uint8List> incidentPdfBytes(DispatchSnapshot data) async {
 
 Future<void> exportIncidentPdf(DispatchSnapshot data) async => downloadFile(
   await incidentPdfBytes(data),
-  'adms-incidents.pdf',
+  'welcore-incidents.pdf',
   'application/pdf',
 );
 Future<Uint8List> carePdfBytes(
@@ -94,7 +94,7 @@ Future<Uint8List> carePdfBytes(
     pw.MultiPage(
       pageFormat: PdfPageFormat.a4,
       build: (_) => [
-        pw.Header(level: 0, text: 'ADMS - Patient Care Report'),
+        pw.Header(level: 0, text: 'Welcore - Patient Care Report'),
         pw.Text(
           'Incident #${incident.id} | ${incident.assignedCallSign ?? 'Unassigned'}',
         ),
@@ -140,6 +140,6 @@ Future<Uint8List> carePdfBytes(
 Future<void> exportCarePdf(DispatchIncident incident, CareReport care) async =>
     downloadFile(
       await carePdfBytes(incident, care),
-      'adms-care-${incident.id}.pdf',
+      'welcore-care-${incident.id}.pdf',
       'application/pdf',
     );
