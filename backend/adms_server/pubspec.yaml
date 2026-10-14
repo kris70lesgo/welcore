@@ -1,0 +1,15 @@
+name: adms_server
+description: Serverpod ambulance dispatch simulation backend.
+version: 1.0.0
+publish_to: none
+environment:
+  sdk: ^3.12.2
+dependencies:
+  serverpod: 4.0.4
+  cryptography: ^2.9.0
+  crypto: ^3.0.6
+  uuid: ^4.5.1
+dev_dependencies:
+  lints: ^6.0.0
+  serverpod_test: 4.0.4
+  test: ^1.25.5

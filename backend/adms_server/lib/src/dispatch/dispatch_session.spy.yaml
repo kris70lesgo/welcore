@@ -1,0 +1,15 @@
+class: DispatchSession
+table: dispatch_session
+serverOnly: true
+fields:
+  name: String, default='Manila operations'
+  isDemo: bool, default=true
+  autoDispatch: bool, default=false
+  responseTargetMinutes: int, default=10
+  tokenHash: String
+  revision: int
+  expiresAt: DateTime
+indexes:
+  dispatch_session_token_idx:
+    fields: tokenHash
+    unique: true

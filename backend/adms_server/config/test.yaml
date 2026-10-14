@@ -1,0 +1,26 @@
+apiServer:
+  port: 0
+  publicHost: localhost
+  publicPort: 0
+  publicScheme: http
+insightsServer:
+  port: 0
+  publicHost: localhost
+  publicPort: 0
+  publicScheme: http
+webServer:
+  port: 0
+  publicHost: localhost
+  publicPort: 0
+  publicScheme: http
+database:
+  host: localhost
+  port: 5432
+  name: adms_dispatch_test
+  user: adms_dispatch
+redis:
+  enabled: false
+maxRequestSize: 524288
+sessionLogs:
+  persistentEnabled: false
+  consoleEnabled: true

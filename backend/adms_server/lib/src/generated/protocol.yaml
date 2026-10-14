@@ -1,0 +1,24 @@
+account:
+  - registerOrganization:
+  - login:
+  - logout:
+  - invite:
+  - acceptInvite:
+  - changePassword:
+  - updateMember:
+dispatch:
+  - startDemo:
+  - snapshot:
+  - watch:
+  - report:
+  - dispatchNearest:
+  - advance:
+  - cancel:
+operations:
+  - saveUnit:
+  - updateLocation:
+  - saveHospital:
+  - setDestination:
+  - saveCareReport:
+  - saveMaintenance:
+  - settings:

@@ -1,0 +1,17 @@
+class: StaffAccount
+table: staff_account
+serverOnly: true
+fields:
+  workspaceId: int
+  email: String
+  name: String
+  role: String
+  passwordSalt: String
+  passwordHash: String
+  active: bool
+  assignedUnitId: int?
+  createdAt: DateTime
+indexes:
+  staff_account_email_idx:
+    fields: email
+    unique: true

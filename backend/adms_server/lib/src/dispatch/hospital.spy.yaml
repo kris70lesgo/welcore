@@ -1,0 +1,10 @@
+class: Hospital
+table: dispatch_hospital
+fields:
+  workspaceId: int
+  name: String
+  address: String
+  phone: String
+  latitude: double
+  longitude: double
+  active: bool

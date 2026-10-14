@@ -1,0 +1,16 @@
+class: StaffInvite
+table: staff_invite
+serverOnly: true
+fields:
+  workspaceId: int
+  tokenHash: String
+  email: String
+  role: String
+  assignedUnitId: int?
+  recoveryAccountId: int?
+  expiresAt: DateTime
+  usedAt: DateTime?
+indexes:
+  staff_invite_tokenhash_idx:
+    fields: tokenHash
+    unique: true

@@ -1,0 +1,11 @@
+class: MaintenanceJob
+table: dispatch_maintenance
+fields:
+  workspaceId: int
+  unitId: int
+  title: String
+  notes: String
+  dueAt: DateTime
+  cost: double
+  status: String
+  updatedAt: DateTime

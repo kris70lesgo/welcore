@@ -1,0 +1,11 @@
+class: DispatchEvent
+table: dispatch_event
+fields:
+  workspaceId: int
+  incidentId: int
+  message: String
+  status: String
+  createdAt: DateTime
+indexes:
+  dispatch_event_workspace_idx:
+    fields: workspaceId

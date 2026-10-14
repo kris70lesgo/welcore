@@ -1,0 +1,13 @@
+class: DispatchSnapshot
+fields:
+  viewer: StaffProfile?
+  config: WorkspaceConfig?
+  hospitals: List<Hospital>?
+  careReports: List<CareReport>?
+  maintenance: List<MaintenanceJob>?
+  staff: List<StaffProfile>?
+  revision: int
+  incidents: List<DispatchIncident>
+  units: List<DispatchUnit>
+  events: List<DispatchEvent>
+  serverTime: DateTime

@@ -1,0 +1,9 @@
+class: StaffProfile
+fields:
+  id: int
+  workspaceId: int
+  name: String
+  email: String
+  role: String
+  active: bool
+  assignedUnitId: int?

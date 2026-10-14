@@ -1,0 +1,24 @@
+class: DispatchIncident
+table: dispatch_incident
+fields:
+  reporterAccountId: int?
+  destinationHospitalId: int?
+  destinationHospitalName: String?
+  workspaceId: int
+  description: String
+  address: String
+  latitude: double
+  longitude: double
+  severity: String
+  status: String
+  createdAt: DateTime
+  updatedAt: DateTime
+  assignedUnitId: int?
+  assignedCallSign: String?
+  dispatchDistanceKm: double?
+  dispatchedAt: DateTime?
+  onSceneAt: DateTime?
+  resolvedAt: DateTime?
+indexes:
+  dispatch_incident_workspace_idx:
+    fields: workspaceId

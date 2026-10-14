@@ -1,0 +1,15 @@
+*
+!Dockerfile
+!pubspec.yaml
+!pubspec.lock
+!bin/
+!bin/**
+!lib/
+!lib/**
+!config/
+!config/production.yaml
+!migrations/
+!migrations/**
+!web/
+!web/app/
+!web/app/**

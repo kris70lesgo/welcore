@@ -1,0 +1,6 @@
+class: WorkspaceConfig
+fields:
+  name: String
+  isDemo: bool
+  autoDispatch: bool
+  responseTargetMinutes: int

@@ -1,0 +1,21 @@
+class: CareReport
+table: dispatch_care_report
+fields:
+  workspaceId: int
+  incidentId: int
+  patientName: String
+  age: int?
+  condition: String
+  pulse: int?
+  systolic: int?
+  diastolic: int?
+  oxygenSaturation: int?
+  treatment: String
+  notes: String
+  handedOverTo: String
+  signedOff: bool
+  updatedAt: DateTime
+indexes:
+  dispatch_care_report_incidentid_idx:
+    fields: incidentId
+    unique: true

@@ -1,0 +1,16 @@
+class: DispatchUnit
+table: dispatch_unit
+fields:
+  plateNumber: String?
+  unitType: String?
+  active: bool, default=true
+  locationUpdatedAt: DateTime?
+  workspaceId: int
+  callSign: String
+  crew: String
+  latitude: double
+  longitude: double
+  status: String
+indexes:
+  dispatch_unit_workspace_idx:
+    fields: workspaceId

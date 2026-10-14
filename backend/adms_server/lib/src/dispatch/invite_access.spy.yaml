@@ -1,0 +1,7 @@
+class: InviteAccess
+fields:
+  token: String
+  email: String
+  role: String
+  expiresAt: DateTime
+  recovery: bool

@@ -1,0 +1,3 @@
+exception: DispatchException
+fields:
+  message: String

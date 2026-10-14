@@ -1,0 +1,11 @@
+class: StaffSession
+table: staff_session
+serverOnly: true
+fields:
+  accountId: int
+  tokenHash: String
+  expiresAt: DateTime
+indexes:
+  staff_session_tokenhash_idx:
+    fields: tokenHash
+    unique: true

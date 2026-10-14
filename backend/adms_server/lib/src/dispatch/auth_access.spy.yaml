@@ -1,0 +1,6 @@
+class: AuthAccess
+fields:
+  recoveryCode: String?
+  token: String
+  expiresAt: DateTime
+  profile: StaffProfile
