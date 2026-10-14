@@ -784,7 +784,7 @@ class _DispatchWorkspaceState extends State<DispatchWorkspace> {
           ),
         ),
         SizedBox(
-          height: 330,
+          height: MediaQuery.sizeOf(context).width < 700 ? 260 : 330,
           child: widget.showMap
               ? DispatchMapWidget(
                   incidents: c.data!.incidents
@@ -836,12 +836,34 @@ class _DispatchWorkspaceState extends State<DispatchWorkspace> {
             runSpacing: 12,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              Text(
-                'Incident queue  (${incidents.length})',
-                style: const TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 15,
-                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'Incident queue',
+                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                  ),
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 4,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFEAF5F2),
+                      borderRadius: BorderRadius.circular(7),
+                      border: Border.all(color: const Color(0xFFD1E8E2)),
+                    ),
+                    child: Text(
+                      '${incidents.length}',
+                      style: const TextStyle(
+                        color: _teal,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SegmentedButton<bool>(
                 style: const ButtonStyle(visualDensity: VisualDensity.compact),
@@ -901,7 +923,15 @@ class _DispatchWorkspaceState extends State<DispatchWorkspace> {
                 color: _selected?.id == incident.id
                     ? const Color(0xFFEDF7F4)
                     : const Color(0xFFF7F9FB),
-                borderRadius: BorderRadius.circular(12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: BorderSide(
+                    color: _selected?.id == incident.id
+                        ? _teal.withValues(alpha: .4)
+                        : Colors.transparent,
+                  ),
+                ),
+                clipBehavior: Clip.antiAlias,
                 child: InkWell(
                   key: Key('incident-${incident.id}'),
                   borderRadius: BorderRadius.circular(12),
