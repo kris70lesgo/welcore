@@ -1,6 +1,23 @@
-# Welcore — Serverpod ambulance dispatch application
+# Welcore
 
-A complete local Flutter application for an organization to manage incident intake, ambulance responses, crew assignments, receiving hospitals, patient handover, fleet maintenance, and reports. The default application runs entirely on **Serverpod 4.0.4 and PostgreSQL**.
+### Build Something Real: The Serverpod Hackathon
+
+**A Flutter and Serverpod dispatch workspace that coordinates an ambulance response from the first report through hospital handover.**
+
+[Open the live demo](https://welcore.serverpod.space/) · [Hackathon project brief](docs/HACKATHON.md) · [Submission details](docs/SUBMISSION.md)
+
+Welcore brings incident intake, ambulance readiness, nearest-unit dispatch, crew progress, hospital handover, and an audit timeline into one workspace. The public demo uses fictional incidents and fleet data; start with **Start dispatch demo** to try the workflow.
+
+## What the demo shows
+
+- Report incidents and dispatch the nearest active, available unit.
+- Follow responses through scene arrival, transport, and hospital handover, with live status updates.
+- Review the activity log and response analytics, then export incident reports as CSV or PDF.
+- Manage ambulances, receiving hospitals, organization members, and scheduled maintenance.
+
+## Why Serverpod is central
+
+The Flutter app uses Serverpod’s generated, typed Dart client. Serverpod validates workflow transitions, ranks available units, and commits incident, unit, and audit-event changes to PostgreSQL. It publishes revision signals over WebSockets; each client then re-authorizes and loads its own role-filtered snapshot. This makes the backend part of the dispatch workflow, not a placeholder behind a static demo.
 
 ## Run
 
@@ -68,8 +85,10 @@ The entry's demo needs a publicly reachable site or downloadable build until jud
 
 The completed app does not require Firebase credentials. Enrollment/recovery uses private one-time codes; email addresses are login identifiers and are not externally verified. Notifications are in-app. SMTP, SMS, native push, and a live emergency-service connection are not configured. Device location is user initiated; manual location is available. Maps use external OpenStreetMap tiles, with a cache for the local preview. Native release builds were not validated; the hosted web release and responsive UI were validated.
 
-The app is suitable for a hackathon demonstration with fictional records. Public deployment and real operational use require external service configuration and an independent review of deployment/privacy requirements. The hackathon entry has not been submitted.
+The app is suitable for a hackathon demonstration with fictional records. Public deployment and real operational use require external service configuration and an independent review of deployment and privacy requirements.
 
-## Attribution
+## Attribution and AI disclosure
 
-This extends [Sajed Lopez Mendoza's Apache-licensed ADMS](https://github.com/qppd/ambulance-dispatch-management-system). The original license, attribution and [legacy documentation](docs/LEGACY_README.md) are retained. The new full app replaces the default Firebase workflow with Serverpod; the original Firebase screens remain as reference under the separate legacy entrypoint. Disclose the inherited source and check the event's rules for pre-existing code before claiming eligibility.
+This project extends [Sajed Lopez Mendoza's Apache-licensed ADMS](https://github.com/qppd/ambulance-dispatch-management-system), which was already present in the workspace. The original license, attribution, and [legacy documentation](docs/LEGACY_README.md) are retained. The new dispatch application replaces the default Firebase workflow with Serverpod; original Firebase screens remain as reference under the separate legacy entrypoint.
+
+AI coding assistants were used during development. The [submission notes](docs/SUBMISSION.md) describe the inherited source, new work, and verification in more detail. Review the event's rules for pre-existing code before claiming eligibility.
